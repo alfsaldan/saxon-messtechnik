@@ -1,5 +1,11 @@
-<footer class="bg-[#05080D] border-t border-white/10 pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<footer class="relative bg-[#05080D] border-t border-white/10 pt-16 pb-8 overflow-hidden">
+    <!-- Background Image Layer -->
+    <div class="absolute inset-0 z-0">
+        <img src="/footer.webp" alt="Footer Background" class="w-full h-full object-cover opacity-100">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#05080D] via-[#05080D]/60 to-[#05080D]/30"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
             <!-- Brand -->
             <div class="lg:col-span-1">

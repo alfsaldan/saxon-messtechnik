@@ -13,11 +13,9 @@
             <div class="hidden md:block">
                 <div class="ml-10 flex items-center space-x-8">
                     <a href="/" class="{{ request()->is('/') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-semibold">Home</a>
+                    <a href="/about" class="{{ request()->is('about*') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">About</a>
                     <a href="/products" class="{{ request()->is('products*') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">Products</a>
-                    <a href="/solutions" class="{{ request()->is('solutions*') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">Solutions</a>
-                    <a href="/industries" class="{{ request()->is('industries*') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">Industries</a>
-                    <a href="/about" class="{{ request()->is('about*') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">About Us</a>
-                    <a href="/support" class="{{ request()->is('support*') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">Support</a>
+                    <a href="/contact" class="{{ request()->is('contact*') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">Contact</a>
                 </div>
             </div>
             
@@ -53,11 +51,9 @@
          x-transition:leave-end="opacity-0 -translate-y-2">
         <div class="px-4 pt-2 pb-6 space-y-2 shadow-2xl">
             <a href="/" class="text-[#6EDC44] block px-3 py-2 rounded-md text-base font-medium bg-white/5">Home</a>
+            <a href="/about" class="text-gray-300 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">About</a>
             <a href="/products" class="text-gray-300 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Products</a>
-            <a href="/solutions" class="text-gray-300 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Solutions</a>
-            <a href="/industries" class="text-gray-300 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Industries</a>
-            <a href="/about" class="text-gray-300 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
-            <a href="/support" class="text-gray-300 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Support</a>
+            <a href="/contact" class="text-gray-300 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             <a href="/quote" class="bg-[#6EDC44] text-[#05080D] block px-3 py-2 rounded-md text-base font-bold mt-4 text-center">Get A Quote</a>
         </div>
     </div>
