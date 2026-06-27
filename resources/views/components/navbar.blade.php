@@ -21,7 +21,7 @@
             
             <!-- CTA Button Desktop -->
             <div class="hidden md:block">
-                <a href="/quote" class="bg-[#6EDC44] hover:bg-[#52C22D] text-[#05080D] px-6 py-2.5 rounded-full font-semibold transition-colors duration-300 text-sm flex items-center gap-2">
+                <a href="/contact" class="bg-[#6EDC44] hover:bg-[#52C22D] text-[#05080D] px-6 py-2.5 rounded-full font-semibold transition-colors duration-300 text-sm flex items-center gap-2">
                     Get A Quote
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
@@ -54,7 +54,7 @@
             <a href="/about" class="text-gray-300 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">About</a>
             <a href="/products" class="text-gray-300 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Products</a>
             <a href="/contact" class="text-gray-300 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            <a href="/quote" class="bg-[#6EDC44] text-[#05080D] block px-3 py-2 rounded-md text-base font-bold mt-4 text-center">Get A Quote</a>
+            <a href="/contact" class="bg-[#6EDC44] text-[#05080D] block px-3 py-2 rounded-md text-base font-bold mt-4 text-center">Get A Quote</a>
         </div>
     </div>
 </nav>

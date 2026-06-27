@@ -13,37 +13,10 @@
     <link rel="shortcut icon" href="{{ asset('assets/favicon/favicon.ico') }}">
 
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'Inter';
-            src: url('/assets/fonts/inter/Inter-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('/assets/fonts/inter/Inter-Medium.ttf') format('truetype');
-            font-weight: 500;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('/assets/fonts/inter/Inter-SemiBold.ttf') format('truetype');
-            font-weight: 600;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('/assets/fonts/inter/Inter-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Inter';
-            src: url('/assets/fonts/inter/Inter-ExtraBold.ttf') format('truetype');
-            font-weight: 800;
-            font-display: swap;
-        }
         body { font-family: 'Inter', sans-serif; background-color: #05080D; color: #FFFFFF; }
         
         /* Scroll Animation Utility */
@@ -153,5 +126,6 @@
             document.querySelectorAll('.fade-in-up, .feature-item, .features-fog-card').forEach((el) => observer.observe(el));
         });
     </script>
+    @stack('scripts')
 </body>
 </html>
