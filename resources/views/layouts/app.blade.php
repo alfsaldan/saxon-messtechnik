@@ -49,8 +49,8 @@
         /* Scroll Animation Utility */
         .fade-in-up {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         .fade-in-up.is-visible {
             opacity: 1;
@@ -99,9 +99,8 @@
         /* ---- Feature Card Slide-in Animation ---- */
         .feature-item {
             opacity: 0;
-            transform: translateY(24px) scale(.96);
-            transition: opacity .7s cubic-bezier(.22,1,.36,1),
-                        transform .7s cubic-bezier(.22,1,.36,1);
+            transform: translateY(25px) scale(.98);
+            transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         .feature-item.is-visible {
             opacity: 1;
@@ -149,7 +148,7 @@
                         entry.target.classList.add('is-visible');
                     }
                 });
-            }, { threshold: 0.1 });
+            }, { threshold: 0.15 });
 
             document.querySelectorAll('.fade-in-up, .feature-item, .features-fog-card').forEach((el) => observer.observe(el));
         });

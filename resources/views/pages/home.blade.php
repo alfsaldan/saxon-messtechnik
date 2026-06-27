@@ -6,18 +6,24 @@
 <!-- Hero Section -->
 <section class="relative pt-32 pb-40 lg:pt-48 lg:pb-52 overflow-hidden min-h-[600px] lg:min-h-[700px]">
     <!-- Background image -->
-    <div class="absolute inset-0 z-0">
-        <img src="/assets/hero/home-hero.webp" alt="Industrial Background" class="w-full h-full object-cover object-[center_40%]" style="image-rendering: auto;">
-        <!-- Dark gradient overlay for text readability -->
-        <div class="absolute inset-0 bg-gradient-to-r from-[#05080D]/90 from-[20%] via-[#05080D]/50 via-[50%] to-transparent"></div>
-        <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#05080D] via-[#05080D]/50 to-transparent"></div>
+    <div class="absolute inset-0 z-0 bg-[#05080D]">
+        <img src="/assets/hero/home-hero.webp" alt="Industrial Background" class="w-full h-full object-cover object-[center_40%] opacity-80" style="image-rendering: auto;">
+        <!-- Dark Edge Smoothing -->
+        <div class="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#05080D] via-[#05080D]/60 to-transparent pointer-events-none"></div>
     </div>
+    
+    <!-- White Mist Transition to next section -->
+    <div class="absolute inset-x-0 bottom-0 h-48 lg:h-72 bg-gradient-to-t from-white from-20% via-white/90 to-transparent pointer-events-none z-10"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div class="flex flex-col lg:flex-row items-center gap-12">
             <!-- Text Content -->
-            <div class="w-full lg:w-[65%] fade-in-up">
-                <p class="text-[#6EDC44] font-bold tracking-widest text-xs lg:text-sm uppercase mb-2">Advanced Liquid Analysis Solutions</p>
+            <div class="w-full lg:w-[75%] fade-in-up relative">
+                <!-- Fog behind text -->
+                <div class="absolute -inset-10 lg:-inset-20 z-0 pointer-events-none" style="background: radial-gradient(ellipse at center left, rgba(5,8,13,0.9) 0%, rgba(5,8,13,0.6) 50%, transparent 80%); filter: blur(40px);"></div>
+                
+                <div class="relative z-10">
+                    <p class="text-[#6EDC44] font-bold tracking-widest text-xs lg:text-sm uppercase mb-2">Advanced Liquid Analysis Solutions</p>
                 <h1 class="text-5xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight mb-4">
                     Precision Sensors.<br>
                     Reliable Results.<br>
@@ -31,10 +37,11 @@
                         Explore Products
                         <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
-                    <a href="#video" class="group bg-white/10 hover:bg-white/20 text-white px-8 py-3.5 rounded-full font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2 backdrop-blur-sm hover:scale-105 active:scale-95 hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] border border-white/10 hover:border-white/30">
-                        <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:scale-110 text-[#6EDC44]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        Watch Overview
+                    <a href="/contact" class="group bg-white/10 hover:bg-white/20 text-white px-8 py-3.5 rounded-full font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2 backdrop-blur-sm hover:scale-105 active:scale-95 hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] border border-white/10 hover:border-white/30">
+                        <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:scale-110 text-[#6EDC44]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        Contact Us
                     </a>
+                </div>
                 </div>
             </div>
         </div>
@@ -42,8 +49,11 @@
 </section>
 
 <!-- Features Floating Card - Bridge between Hero and Products -->
-<section class="relative z-30 -mt-24 lg:-mt-28 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="relative z-30 -mt-24 lg:-mt-28 pt-8 lg:pt-12 pb-8">
+    <!-- White background that starts exactly below the hero section to blend seamlessly with the mist -->
+    <div class="absolute inset-x-0 bottom-0 top-24 lg:top-28 bg-white -z-10"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="features-fog-card bg-[#0E131B]/95 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl p-6 lg:p-8">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
                 <!-- Feature 1 -->

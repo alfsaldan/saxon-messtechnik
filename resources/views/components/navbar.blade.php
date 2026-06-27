@@ -1,4 +1,4 @@
-<nav x-data="{ mobileMenuOpen: false }" class="fixed w-full z-50 top-0 transition-all duration-300 bg-[#05080D]/85 backdrop-blur-md border-b border-white/10" id="navbar">
+<nav x-data="{ mobileMenuOpen: false }" class="fixed w-full z-50 top-0 transition-all duration-300 bg-[#05080D]/40 backdrop-blur-md border-b border-white/10" id="navbar">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-[88px]">
             <!-- Logo -->
@@ -10,9 +10,9 @@
             </div>
             
             <!-- Desktop Menu -->
-            <div class="hidden md:block">
-                <div class="ml-10 flex items-center space-x-8">
-                    <a href="/" class="{{ request()->is('/') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-semibold">Home</a>
+            <div class="hidden md:flex flex-1 justify-center">
+                <div class="flex items-center space-x-12">
+                    <a href="/" class="{{ request()->is('/') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">Home</a>
                     <a href="/about" class="{{ request()->is('about*') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">About</a>
                     <a href="/products" class="{{ request()->is('products*') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">Products</a>
                     <a href="/contact" class="{{ request()->is('contact*') ? 'text-[#6EDC44] border-b-2 border-[#6EDC44]' : 'text-gray-300 hover:text-[#6EDC44] border-b-2 border-transparent hover:border-[#6EDC44]' }} transition-all px-1 py-2 text-sm font-medium">Contact</a>

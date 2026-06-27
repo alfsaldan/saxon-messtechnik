@@ -5,14 +5,21 @@
 @section('content')
 
 <!-- Hero Section -->
-<section class="relative pt-32 pb-32 lg:pt-48 lg:pb-40 overflow-hidden min-h-[550px] lg:min-h-[650px]">
-    <div class="absolute inset-0 z-0">
-        <img src="/assets/hero/about-hero.webp" alt="About Us Background" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#05080D]/90 from-[10%] via-[#05080D]/50 via-[60%] to-transparent"></div>
-        <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#05080D] via-[#05080D]/50 to-transparent"></div>
+<section class="relative pt-32 pb-32 lg:pt-48 lg:pb-40 overflow-hidden min-h-[670px] lg:min-h-[700px]">
+    <div class="absolute inset-0 z-0 bg-[#05080D]">
+        <img src="/assets/hero/about-hero.webp" alt="About Us Background" class="w-full h-full object-cover opacity-80">
+        <!-- Dark Edge Smoothing -->
+        <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#05080D] via-[#05080D]/60 to-transparent pointer-events-none"></div>
     </div>
+    
+    <!-- White Mist Transition to next section -->
+    <div class="absolute inset-x-0 bottom-0 h-32 lg:h-48 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none z-10"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div class="w-full lg:w-[70%] fade-in-up">
+        <div class="w-full lg:w-[80%] fade-in-up relative">
+            <!-- Fog behind text -->
+            <div class="absolute -inset-10 lg:-inset-20 z-0 pointer-events-none" style="background: radial-gradient(ellipse at center left, rgba(5,8,13,0.9) 0%, rgba(5,8,13,0.6) 50%, transparent 80%); filter: blur(40px);"></div>
+            
+            <div class="relative z-10">
             <p class="text-[#6EDC44] font-bold tracking-widest text-xs lg:text-sm uppercase mb-3">About Us</p>
             <h1 class="text-4xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-6">
                 Engineering Precision<br>
@@ -22,6 +29,7 @@
             <p class="text-base lg:text-lg text-white/80 max-w-2xl font-medium leading-relaxed">
                 Saxon Messtechnik is a manufacturer of advanced liquid analysis solutions, delivering reliable monitoring technologies for industries and a sustainable future.
             </p>
+            </div>
         </div>
     </div>
 </section>
