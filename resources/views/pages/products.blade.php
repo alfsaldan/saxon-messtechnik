@@ -2,12 +2,130 @@
 
 @section('title', 'Products | Saxon Messtechnik')
 
+@php
+    $category = request()->query('category', 'gas-analyzer');
+
+    if (!in_array($category, ['gas-analyzer', 'gas-detector', 'liquid-analyzer'])) {
+        $category = 'gas-analyzer';
+    }
+
+    $content = [];
+
+    if ($category === 'gas-analyzer') {
+        $content = [
+            'category_name' => 'Gas Analyzer',
+            'hero_img' => '/assets/hero/hero-gasanalyzer.webp',
+            'hero_title' => 'Precision Gas Analysis <br>for Critical Environments.',
+            'hero_desc' => 'High-performance gas analyzers engineered for accurate, real-time monitoring and maximum reliability in critical applications.',
+            'categories' => [
+                [
+                    'name' => 'Oxygen Analyzer',
+                    'desc' => 'Reliable oxygen monitoring for safety, process efficiency, and emissions control.',
+                    'products' => [
+                        [
+                            'name' => 'OXYM 25',
+                            'img' => '/assets/product/gas-analyzer/oxygen-analyzer/OXYM 25.webp',
+                            'desc' => 'High-precision oxygen analyzer for continuous process monitoring with smart digital communication and rapid response.',
+                        ],
+                        [
+                            'name' => 'TOX 290',
+                            'img' => '/assets/product/gas-analyzer/oxygen-analyzer/TOX 290.webp',
+                            'desc' => 'Robust trace oxygen analyzer designed for harsh industrial environments, ensuring maximum stability and reliability.',
+                        ]
+                    ]
+                ],
+                [
+                    'name' => 'Humidity Analyzer',
+                    'desc' => 'Accurate moisture and humidity measurement for process optimization.',
+                    'products' => [
+                        [
+                            'name' => 'MH1223',
+                            'img' => '/assets/product/gas-analyzer/humidity-analyzer/MH1223.webp',
+                            'desc' => 'Advanced humidity analyzer providing real-time data for critical moisture control applications and industrial drying.',
+                        ],
+                        [
+                            'name' => 'MHS1225',
+                            'img' => '/assets/product/gas-analyzer/humidity-analyzer/MHS1225.webp',
+                            'desc' => 'High-performance sensor for continuous humidity measurement in extreme temperature conditions with excellent durability.',
+                        ],
+                        [
+                            'name' => 'MHK1233',
+                            'img' => '/assets/product/gas-analyzer/humidity-analyzer/MHK1233.webp',
+                            'desc' => 'Versatile humidity and temperature analyzer featuring superior interference resistance and low maintenance requirements.',
+                        ]
+                    ]
+                ]
+            ]
+        ];
+    } elseif ($category === 'gas-detector') {
+        $content = [
+            'category_name' => 'Gas Detector',
+            'hero_img' => '/assets/hero/hero-gasdetector.webp',
+            'hero_title' => 'Advanced Gas Detection <br>for Maximum Safety.',
+            'hero_desc' => 'Protect your personnel and plant with our comprehensive range of toxic and combustible gas detectors, ensuring a safe working environment.',
+            'categories' => [
+                [
+                    'name' => 'Toxic & Combustible Gas Detectors',
+                    'desc' => 'Comprehensive continuous detection solutions for a wide range of hazardous gases.',
+                    'products' => [
+                        [
+                            'name' => 'Combustible & Corrosive Gas Detector',
+                            'img' => '/assets/product/gas-detector/CombustibleCorrosiveGasDetector_CL2, NH3, O3, HCL.webp',
+                            'desc' => 'Designed for early detection of CL2, NH3, O3, and HCL with high sensitivity and rapid response times to prevent accidents.',
+                        ],
+                        [
+                            'name' => 'Electrochemical Toxic Gas Detector',
+                            'img' => '/assets/product/gas-detector/ElectrochemicalToxicGasDetector_CO, H2S, H2, NO, NO2, SO2.webp',
+                            'desc' => 'Precision electrochemical sensing for CO, H2S, H2, NO, NO2, and SO2 in hazardous industrial areas and confined spaces.',
+                        ],
+                        [
+                            'name' => 'Oxygen & IR Gas Detector',
+                            'img' => '/assets/product/gas-detector/Oxygen& IRGasDetector_O2, CO2, NOX.webp',
+                            'desc' => 'Advanced infrared and oxygen detection technology for O2, CO2, and NOX monitoring with long-term stability and minimal drift.',
+                        ]
+                    ]
+                ]
+            ]
+        ];
+    } elseif ($category === 'liquid-analyzer') {
+        $content = [
+            'category_name' => 'Liquid Analyzer',
+            'hero_img' => '/assets/hero/hero-liquidanalyzer.webp',
+            'hero_title' => 'Accurate Liquid Analysis <br>for Process Optimization.',
+            'hero_desc' => 'High-performance liquid analysis instruments engineered for precision water quality monitoring and industrial fluid control.',
+            'categories' => [
+                [
+                    'name' => 'Liquid Analyzer Sensors',
+                    'desc' => 'Reliable and accurate measurement solutions for free chlorine, pH, ORP, and other critical water quality parameters.',
+                    'products' => [
+                        [
+                            'name' => 'Free Chlorine Sensor (Standard)',
+                            'img' => '/assets/product/liquid-analyzer/freechlorinesensor.webp',
+                            'desc' => 'Digital free chlorine sensor for drinking water and wastewater applications featuring smart communication and easy calibration.',
+                        ],
+                        [
+                            'name' => 'Free Chlorine Sensor (Advanced)',
+                            'img' => '/assets/product/liquid-analyzer/freechlorinesensor2.webp',
+                            'desc' => 'High-performance sensor for continuous chlorine measurement in critical processes, equipped with superior interference resistance.',
+                        ],
+                        [
+                            'name' => 'PH & ORP Sensor',
+                            'img' => '/assets/product/liquid-analyzer/ORP&PHSensor.webp',
+                            'desc' => 'Combined pH and ORP measurement solution designed for maximum durability, accurate readings, and seamless integration.',
+                        ]
+                    ]
+                ]
+            ]
+        ];
+    }
+@endphp
+
 @section('content')
 <!-- Hero Section -->
 <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden min-h-[500px] lg:min-h-[700px] bg-[#05080D]">
     <!-- Background image -->
     <div class="absolute inset-0 z-0">
-        <img src="/assets/hero/product-hero.webp" alt="Products Background" class="w-full h-full object-cover object-center opacity-60 mix-blend-screen" style="image-rendering: auto;">
+        <img src="{{ $content['hero_img'] }}" alt="Products Background" class="w-full h-full object-cover object-center opacity-60 mix-blend-screen" style="image-rendering: auto;">
         <!-- Dark Edge Smoothing to white -->
         <div class="absolute inset-x-0 bottom-0 h-24 lg:h-32 bg-gradient-to-t from-white via-white/70 to-transparent pointer-events-none z-10"></div>
     </div>
@@ -18,12 +136,12 @@
             <div class="absolute -inset-10 lg:-inset-20 z-0 pointer-events-none" style="background: radial-gradient(ellipse at center left, rgba(5,8,13,0.9) 0%, rgba(5,8,13,0.6) 50%, transparent 80%); filter: blur(40px);"></div>
             
             <div class="relative z-10">
-            <p class="text-[#6EDC44] font-bold tracking-widest text-xs lg:text-sm uppercase mb-3">Our Products</p>
+            <p class="text-[#6EDC44] font-bold tracking-widest text-xs lg:text-sm uppercase mb-3">Our Products &bull; {{ $content['category_name'] }}</p>
             <h1 class="text-5xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight mb-6">
-                Advanced Sensors <br>for Accurate. Reliable.<br> Real-time Monitoring.
+                {!! $content['hero_title'] !!}
             </h1>
             <p class="text-base lg:text-lg text-white/80 mb-10 max-w-2xl font-medium leading-relaxed">
-                High-performance liquid analysis instruments engineered for precision, built for reliability, designed for every challenge.
+                {{ $content['hero_desc'] }}
             </p>
             
             <div class="flex flex-col sm:flex-row gap-6 sm:gap-8 lg:gap-12">
@@ -60,195 +178,47 @@
     </div>
 </section>
 
-<!-- Product Categories Section -->
-<section class="py-16 bg-white relative z-20">
+<!-- Products Display Sections -->
+@foreach ($content['categories'] as $catIndex => $subcat)
+<section class="py-20 {{ $catIndex % 2 == 0 ? 'bg-white' : 'bg-gray-50' }} relative z-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row justify-between items-end mb-12 gap-6">
-            <div>
-                <p class="text-[#6EDC44] font-bold tracking-wider text-xs uppercase mb-3">Product Categories</p>
-                <h2 class="text-4xl lg:text-5xl font-extrabold text-[#05080D] tracking-tight">Explore Our Product Categories</h2>
-            </div>
-            <a href="#main-products" class="text-[#6EDC44] font-bold inline-flex items-center gap-2 hover:text-[#52C22D] transition-colors duration-300">
-                View All Products <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </a>
+        <div class="text-center mb-16">
+            <p class="text-[#6EDC44] font-bold tracking-wider text-sm uppercase mb-4 inline-block">{{ $content['category_name'] }} Series</p>
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-[#05080D] tracking-tight mb-4">{{ $subcat['name'] }}</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto text-lg">{{ $subcat['desc'] }}</p>
         </div>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            <!-- Category 1 -->
-            <div class="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer" onclick="openPreview('/assets/product/1.webp', 'Chlorine Sensors', 'Accurate free chlorine measurement for disinfection control.')">
-                <div class="flex justify-center items-center h-48 mb-4">
-                    <img src="/assets/product/1.webp" alt="Chlorine Sensors" class="h-40 object-contain group-hover:scale-110 transition-transform duration-500">
+        @php
+            $productCount = count($subcat['products']);
+            $gridClasses = 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
+            $containerClasses = 'w-full';
+            if ($productCount === 1) {
+                $gridClasses = 'grid-cols-1';
+                $containerClasses = 'max-w-md mx-auto';
+            } elseif ($productCount === 2) {
+                $gridClasses = 'grid-cols-1 md:grid-cols-2';
+                $containerClasses = 'max-w-4xl mx-auto';
+            }
+        @endphp
+        
+        <div class="grid {{ $gridClasses }} gap-8 justify-center {{ $containerClasses }}">
+            @foreach ($subcat['products'] as $product)
+            <div class="bg-white border border-gray-200 rounded-3xl p-8 flex flex-col group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 mx-auto w-full max-w-md">
+                <div class="flex justify-center items-center h-56 mb-8 cursor-pointer relative" onclick="openPreview('{{ $product['img'] }}', '{{ addslashes($product['name']) }}', '{{ addslashes($product['desc']) }}')">
+                    <img src="{{ $product['img'] }}" alt="{{ $product['name'] }}" class="h-48 object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-md">
                 </div>
-                <div class="w-12 h-12 rounded-full bg-[#6EDC44] text-white flex items-center justify-center mb-5 shadow-md">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                </div>
-                <h3 class="font-bold text-[#05080D] text-xl mb-3">Chlorine Sensors</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Accurate free chlorine measurement for disinfection control.</p>
-                <a href="#main-products" class="text-[#05080D] font-bold text-sm flex items-center gap-2 group-hover:text-[#6EDC44] transition-colors">
-                    View Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                <h3 class="font-black text-[#05080D] text-xl mb-3 text-center">{{ $product['name'] }}</h3>
+                <p class="text-gray-500 text-sm mb-6 leading-relaxed flex-grow text-center">{{ $product['desc'] }}</p>
+                
+                <a href="/contact?product={{ urlencode($product['name']) }}" class="mt-auto text-[#05080D] font-bold text-sm flex items-center justify-center gap-2 hover:text-[#6EDC44] transition-colors bg-gray-50 py-3 rounded-xl hover:bg-[#6EDC44]/10 border border-transparent hover:border-[#6EDC44]/20">
+                    Ask About Product <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </div>
-
-            <!-- Category 2 -->
-            <div class="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer" onclick="openPreview('/assets/product/2.webp', 'Dissolved Oxygen Sensors', 'Reliable DO monitoring for water quality and process efficiency.')">
-                <div class="flex justify-center items-center h-48 mb-4">
-                    <img src="/assets/product/2.webp" alt="Dissolved Oxygen Sensors" class="h-40 object-contain group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="w-12 h-12 rounded-full bg-[#6EDC44] text-white flex items-center justify-center mb-5 shadow-md">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-                </div>
-                <h3 class="font-bold text-[#05080D] text-xl mb-3">Dissolved Oxygen Sensors</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Reliable DO monitoring for water quality and process efficiency.</p>
-                <a href="#main-products" class="text-[#05080D] font-bold text-sm flex items-center gap-2 group-hover:text-[#6EDC44] transition-colors">
-                    View Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-                </a>
-            </div>
-
-            <!-- Category 3 -->
-            <div class="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer" onclick="openPreview('/assets/product/3.webp', 'TSS Sensors', 'Real-time total suspended solids measurement for process optimization.')">
-                <div class="flex justify-center items-center h-48 mb-4">
-                    <img src="/assets/product/3.webp" alt="TSS Sensors" class="h-40 object-contain group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="w-12 h-12 rounded-full bg-[#6EDC44] text-white flex items-center justify-center mb-5 shadow-md">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                </div>
-                <h3 class="font-bold text-[#05080D] text-xl mb-3">TSS Sensors</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Real-time total suspended solids measurement for process optimization.</p>
-                <a href="#main-products" class="text-[#05080D] font-bold text-sm flex items-center gap-2 group-hover:text-[#6EDC44] transition-colors">
-                    View Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-                </a>
-            </div>
-
-            <!-- Category 4 -->
-            <div class="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer" onclick="openPreview('/assets/product/4.webp', 'Controllers & Transmitters', 'Intelligent controllers for data acquisition, monitoring, and process control.')">
-                <div class="flex justify-center items-center h-48 mb-4">
-                    <img src="/assets/product/4.webp" alt="Controllers & Transmitters" class="h-40 object-contain group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="w-12 h-12 rounded-full bg-[#6EDC44] text-white flex items-center justify-center mb-5 shadow-md">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                </div>
-                <h3 class="font-bold text-[#05080D] text-xl mb-3">Controllers & Transmitters</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Intelligent controllers for data acquisition, monitoring, and process control.</p>
-                <a href="#main-products" class="text-[#05080D] font-bold text-sm flex items-center gap-2 group-hover:text-[#6EDC44] transition-colors">
-                    View Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-                </a>
-            </div>
-
-            <!-- Category 5 -->
-            <div class="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer" onclick="openPreview('/assets/product/3.webp', 'Accessories', 'Calibration solutions, mounting kits, flow cells, and protection systems.')">
-                <div class="flex justify-center items-center h-48 mb-4">
-                    <img src="/assets/product/3.webp" alt="Accessories" class="h-40 object-contain group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="w-12 h-12 rounded-full bg-[#6EDC44] text-white flex items-center justify-center mb-5 shadow-md">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                </div>
-                <h3 class="font-bold text-[#05080D] text-xl mb-3">Accessories</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Calibration solutions, mounting kits, flow cells, and protection systems.</p>
-                <a href="#main-products" class="text-[#05080D] font-bold text-sm flex items-center gap-2 group-hover:text-[#6EDC44] transition-colors">
-                    View Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-                </a>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
-
-<!-- Main Products / Detailed Section -->
-<section id="main-products" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-        <p class="text-[#6EDC44] font-bold tracking-wider text-sm uppercase mb-4 inline-block">Our Main Products</p>
-        <h2 class="text-4xl lg:text-6xl font-extrabold text-[#05080D] tracking-tight mb-10">High Performance. Maximum Reliability.</h2>
-        
-        <!-- Tabs Layout -->
-        <div class="flex flex-wrap justify-center gap-3">
-            <button class="px-8 py-3 bg-[#6EDC44] text-white rounded-full font-bold text-sm shadow-md shadow-[#6EDC44]/20 transition-all hover:scale-105">Chlorine Sensors</button>
-            <button class="px-8 py-3 bg-gray-50 border border-gray-200 text-gray-600 hover:bg-gray-100 rounded-full font-bold text-sm transition-all">Dissolved Oxygen Sensors</button>
-            <button class="px-8 py-3 bg-gray-50 border border-gray-200 text-gray-600 hover:bg-gray-100 rounded-full font-bold text-sm transition-all">TSS Sensors</button>
-            <button class="px-8 py-3 bg-gray-50 border border-gray-200 text-gray-600 hover:bg-gray-100 rounded-full font-bold text-sm transition-all">Controllers & Transmitters</button>
-        </div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Specific Product 1 -->
-            <div class="bg-white border border-gray-200 rounded-3xl p-8 flex flex-col group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                <div class="flex justify-center items-center h-48 mb-8 cursor-pointer relative" onclick="openPreview('/assets/product/1.webp', 'CLX-20 Free Chlorine Sensor', 'Digital free chlorine sensor for drinking water and wastewater applications.')">
-                    <img src="/assets/product/1.webp" alt="CLX-20" class="h-44 object-contain group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <h3 class="font-black text-[#05080D] text-xl mb-3">CLX-20 Free Chlorine Sensor</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Digital free chlorine sensor for drinking water and wastewater applications.</p>
-                <ul class="text-sm text-gray-600 space-y-3 mb-8 flex-grow">
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Measuring range: 0-5 mg/L</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Temperature: 0-50 °C</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Pressure: 0-5 bar</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Smart digital communication</span></li>
-                </ul>
-                <a href="/contact?product=clx-20" class="mt-auto text-[#05080D] font-bold text-sm flex items-center gap-2 hover:text-[#6EDC44] transition-colors">
-                    Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </div>
-
-            <!-- Specific Product 2 -->
-            <div class="bg-white border border-gray-200 rounded-3xl p-8 flex flex-col group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                <div class="flex justify-center items-center h-48 mb-8 cursor-pointer relative" onclick="openPreview('/assets/product/1.webp', 'CLX-50 Free Chlorine Sensor', 'High-performance sensor for continuous chlorine measurement in critical processes.')">
-                    <img src="/assets/product/1.webp" alt="CLX-50" class="h-44 object-contain group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <h3 class="font-black text-[#05080D] text-xl mb-3">CLX-50 Free Chlorine Sensor</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">High-performance sensor for continuous chlorine measurement in critical processes.</p>
-                <ul class="text-sm text-gray-600 space-y-3 mb-8 flex-grow">
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Measuring range: 0-20 mg/L</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Temperature: 0-60 °C</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Pressure: 0-8 bar</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>High stability & low maintenance</span></li>
-                </ul>
-                <a href="/contact?product=clx-50" class="mt-auto text-[#05080D] font-bold text-sm flex items-center gap-2 hover:text-[#6EDC44] transition-colors">
-                    Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </div>
-
-            <!-- Specific Product 3 -->
-            <div class="bg-white border border-gray-200 rounded-3xl p-8 flex flex-col group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                <div class="flex justify-center items-center h-48 mb-8 cursor-pointer relative" onclick="openPreview('/assets/product/1.webp', 'CLX-100 Free Chlorine Sensor', 'Advanced chlorine sensor with extended range and superior interference resistance.')">
-                    <img src="/assets/product/1.webp" alt="CLX-100" class="h-44 object-contain group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <h3 class="font-black text-[#05080D] text-xl mb-3">CLX-100 Free Chlorine Sensor</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">Advanced chlorine sensor with extended range and superior interference resistance.</p>
-                <ul class="text-sm text-gray-600 space-y-3 mb-8 flex-grow">
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Measuring range: 0-50 mg/L</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Temperature: 0-80 °C</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Pressure: 0-10 bar</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Ideal for harsh environments</span></li>
-                </ul>
-                <a href="/contact?product=clx-100" class="mt-auto text-[#05080D] font-bold text-sm flex items-center gap-2 hover:text-[#6EDC44] transition-colors">
-                    Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </div>
-
-            <!-- Specific Product 4 -->
-            <div class="bg-white border border-gray-200 rounded-3xl p-8 flex flex-col group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                <div class="flex justify-center items-center h-48 mb-8 cursor-pointer relative" onclick="openPreview('/assets/product/1.webp', 'CLX-200 High Range Sensor', 'For high concentration chlorine measurement in industrial applications.')">
-                    <img src="/assets/product/1.webp" alt="CLX-200" class="h-44 object-contain group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <h3 class="font-black text-[#05080D] text-xl mb-3">CLX-200 High Range Sensor</h3>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">For high concentration chlorine measurement in industrial applications.</p>
-                <ul class="text-sm text-gray-600 space-y-3 mb-8 flex-grow">
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Measuring range: 0-200 mg/L</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Temperature: 0-60 °C</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Pressure: 0-10 bar</span></li>
-                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-[#6EDC44] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg> <span>Superior accuracy & reliability</span></li>
-                </ul>
-                <a href="/contact?product=clx-200" class="mt-auto text-[#05080D] font-bold text-sm flex items-center gap-2 hover:text-[#6EDC44] transition-colors">
-                    Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </div>
-        </div>
-        
-        <div class="mt-12 text-center">
-            <button class="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-gray-200 rounded-full text-[#05080D] font-bold text-sm hover:border-[#6EDC44] transition-colors">
-                View All Chlorine Sensors <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-            </button>
-        </div>
-    </div>
-</section>
+@endforeach
 
 <!-- Why Choose Us Mini Badge Section -->
 <section class="py-20 bg-white">
@@ -366,7 +336,7 @@
         
         <!-- Image Area -->
         <div class="w-full md:w-1/2 bg-white p-10 flex items-center justify-center relative">
-            <img id="previewImage" src="" alt="Product Preview" class="w-full h-auto object-contain drop-shadow-2xl relative z-10 transform hover:scale-105 transition-transform duration-500">
+            <img id="previewImage" src="" alt="Product Preview" class="w-full h-auto max-h-[400px] object-contain drop-shadow-2xl relative z-10 transform hover:scale-105 transition-transform duration-500">
         </div>
         
         <!-- Text Area -->

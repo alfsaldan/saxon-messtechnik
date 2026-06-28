@@ -23,14 +23,14 @@
                 <div class="absolute -inset-10 lg:-inset-20 z-0 pointer-events-none" style="background: radial-gradient(ellipse at center left, rgba(5,8,13,0.9) 0%, rgba(5,8,13,0.6) 50%, transparent 80%); filter: blur(40px);"></div>
                 
                 <div class="relative z-10">
-                    <p class="text-[#6EDC44] font-bold tracking-widest text-xs lg:text-sm uppercase mb-2">Advanced Liquid Analysis Solutions</p>
+                    <p class="text-[#6EDC44] font-bold tracking-widest text-xs lg:text-sm uppercase mb-2">Advanced Measurement Solutions</p>
                 <h1 class="text-5xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight mb-4">
                     Precision Sensors.<br>
                     Reliable Results.<br>
                     Better Processes.
                 </h1>
                 <p class="text-base lg:text-lg text-white/80 mb-6 max-w-xl font-medium leading-relaxed">
-                    High-performance sensors for chlorine, dissolved oxygen, and TSS monitoring in challenging environments.
+                    High-performance gas analyzers, gas detectors, and liquid analysis sensors for critical industrial environments.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="/products" class="group bg-[#6EDC44] hover:bg-[#52C22D] text-[#05080D] px-8 py-3.5 rounded-full font-bold transition-all duration-300 text-center flex items-center justify-center gap-2 hover:scale-105 active:scale-95 hover:shadow-[0_0_25px_rgba(110,220,68,0.4)]">
@@ -119,63 +119,54 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Product 1 -->
-            <div class="bg-white border-2 border-[#6EDC44] rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(110,220,68,0.5)] transition-all duration-300 group fade-in-up relative">
-                <div class="p-8 pb-0 flex justify-center bg-transparent transition-colors duration-300 relative">
-                    <img src="/assets/product/1.webp" alt="Chlorine Sensor" class="h-56 object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 drop-shadow-md">
+            <!-- Product 1: Gas Analyzer -->
+            <div class="bg-white border-2 border-gray-100 hover:border-blue-500 rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(59,130,246,0.3)] transition-all duration-300 group fade-in-up relative">
+                <div class="p-8 pb-0 flex justify-center bg-transparent transition-colors duration-300 relative h-56 items-center">
+                    <img src="/assets/product/gas-analyzer/oxygen-analyzer/OXYM 25.webp" alt="Gas Analyzer" class="h-48 object-contain opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 drop-shadow-md">
                 </div>
                 <div class="p-8 relative">
-                    <div class="w-10 h-10 bg-[#6EDC44] rounded-full flex items-center justify-center mb-5 text-white group-hover:scale-110 transition-transform duration-300 shadow-md shadow-[#6EDC44]/20">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-blue-500 group-hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-[#05080D] mb-3 group-hover:text-[#6EDC44] transition-colors duration-300">Chlorine Sensors</h3>
-                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">Accurate free chlorine measurement for disinfection control.</p>
-                    <a href="/products" class="text-[#05080D] hover:text-[#6EDC44] font-bold inline-flex items-center gap-2 group/link transition-colors duration-300">
-                        Learn More <svg class="w-4 h-4 text-[#6EDC44] transform transition-transform duration-300 group-hover/link:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                    <h3 class="text-2xl font-black text-[#05080D] mb-3 group-hover:text-blue-500 transition-colors duration-300">Gas Analyzer</h3>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">Precision gas analysis for continuous process monitoring and critical environments.</p>
+                    <a href="/products?category=gas-analyzer" class="text-[#05080D] hover:text-blue-500 font-bold inline-flex items-center gap-2 group/link transition-colors duration-300">
+                        Explore Series <svg class="w-4 h-4 transform transition-transform duration-300 group-hover/link:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                     </a>
-                    <div class="absolute bottom-8 right-8 z-10">
-                        <img src="/logo-brand.webp" alt="Saxon Logo" class="h-6 opacity-70 group-hover:opacity-100 transition-all duration-300 grayscale group-hover:grayscale-0">
-                    </div>
                 </div>
             </div>
 
-            <!-- Product 2 -->
-            <div class="bg-white border-2 border-[#6EDC44] rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(110,220,68,0.5)] transition-all duration-300 group fade-in-up relative" style="transition-delay: 100ms;">
-                <div class="p-8 pb-0 flex justify-center bg-transparent transition-colors duration-300 relative">
-                    <img src="/assets/product/2.webp" alt="DO Sensor" class="h-56 object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 drop-shadow-md">
+            <!-- Product 2: Gas Detector -->
+            <div class="bg-white border-2 border-gray-100 hover:border-orange-500 rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(249,115,22,0.3)] transition-all duration-300 group fade-in-up relative" style="transition-delay: 100ms;">
+                <div class="p-8 pb-0 flex justify-center bg-transparent transition-colors duration-300 relative h-56 items-center">
+                    <img src="/assets/product/gas-detector/ElectrochemicalToxicGasDetector_CO, H2S, H2, NO, NO2, SO2.webp" alt="Gas Detector" class="h-48 object-contain opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 drop-shadow-md">
                 </div>
                 <div class="p-8 relative">
-                    <div class="w-10 h-10 bg-[#6EDC44] rounded-full flex items-center justify-center mb-5 text-white group-hover:scale-110 transition-transform duration-300 shadow-md shadow-[#6EDC44]/20">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                    <div class="w-12 h-12 bg-orange-50 text-orange-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-orange-500 group-hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-[#05080D] mb-3 group-hover:text-[#6EDC44] transition-colors duration-300">Dissolved Oxygen Sensors</h3>
-                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">Reliable DO monitoring for water quality and process efficiency.</p>
-                    <a href="/products" class="text-[#05080D] hover:text-[#6EDC44] font-bold inline-flex items-center gap-2 group/link transition-colors duration-300">
-                        Learn More <svg class="w-4 h-4 text-[#6EDC44] transform transition-transform duration-300 group-hover/link:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                    <h3 class="text-2xl font-black text-[#05080D] mb-3 group-hover:text-orange-500 transition-colors duration-300">Gas Detector</h3>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">Advanced toxic and combustible gas detection for maximum personnel safety.</p>
+                    <a href="/products?category=gas-detector" class="text-[#05080D] hover:text-orange-500 font-bold inline-flex items-center gap-2 group/link transition-colors duration-300">
+                        Explore Series <svg class="w-4 h-4 transform transition-transform duration-300 group-hover/link:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                     </a>
-                    <div class="absolute bottom-8 right-8 z-10">
-                        <img src="/logo-brand.webp" alt="Saxon Logo" class="h-6 opacity-70 group-hover:opacity-100 transition-all duration-300 grayscale group-hover:grayscale-0">
-                    </div>
                 </div>
             </div>
 
-            <!-- Product 3 -->
-            <div class="bg-white border-2 border-[#6EDC44] rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(110,220,68,0.5)] transition-all duration-300 group fade-in-up relative" style="transition-delay: 200ms;">
-                <div class="p-8 pb-0 flex justify-center bg-transparent transition-colors duration-300 relative">
-                    <img src="/assets/product/3.webp" alt="TSS Sensor" class="h-56 object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 drop-shadow-md">
+            <!-- Product 3: Liquid Analyzer -->
+            <div class="bg-white border-2 border-gray-100 hover:border-cyan-500 rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(6,182,212,0.3)] transition-all duration-300 group fade-in-up relative" style="transition-delay: 200ms;">
+                <div class="p-8 pb-0 flex justify-center bg-transparent transition-colors duration-300 relative h-56 items-center">
+                    <img src="/assets/product/liquid-analyzer/freechlorinesensor.webp" alt="Liquid Analyzer" class="h-48 object-contain opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 drop-shadow-md">
                 </div>
                 <div class="p-8 relative">
-                    <div class="w-10 h-10 bg-[#6EDC44] rounded-full flex items-center justify-center mb-5 text-white group-hover:scale-110 transition-transform duration-300 shadow-md shadow-[#6EDC44]/20">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    <div class="w-12 h-12 bg-cyan-50 text-cyan-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-cyan-500 group-hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c0 0-6.5 7.5-6.5 12a6.5 6.5 0 1013 0c0-4.5-6.5-12-6.5-12z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-[#05080D] mb-3 group-hover:text-[#6EDC44] transition-colors duration-300">TSS Sensors</h3>
-                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">Real-time total suspended solids measurement for process optimization.</p>
-                    <a href="/products" class="text-[#05080D] hover:text-[#6EDC44] font-bold inline-flex items-center gap-2 group/link transition-colors duration-300">
-                        Learn More <svg class="w-4 h-4 text-[#6EDC44] transform transition-transform duration-300 group-hover/link:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                    <h3 class="text-2xl font-black text-[#05080D] mb-3 group-hover:text-cyan-500 transition-colors duration-300">Liquid Analyzer</h3>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">High-performance sensors for accurate water quality monitoring and control.</p>
+                    <a href="/products?category=liquid-analyzer" class="text-[#05080D] hover:text-cyan-500 font-bold inline-flex items-center gap-2 group/link transition-colors duration-300">
+                        Explore Series <svg class="w-4 h-4 transform transition-transform duration-300 group-hover/link:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                     </a>
-                    <div class="absolute bottom-8 right-8 z-10">
-                        <img src="/logo-brand.webp" alt="Saxon Logo" class="h-6 opacity-70 group-hover:opacity-100 transition-all duration-300 grayscale group-hover:grayscale-0">
-                    </div>
                 </div>
             </div>
         </div>

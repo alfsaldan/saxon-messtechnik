@@ -38,10 +38,9 @@
             <div>
                 <h3 class="text-sm font-semibold tracking-wider uppercase mb-4 text-white">Products</h3>
                 <ul class="space-y-3">
-                    <li><a href="/products" class="text-sm text-[#6C7480] hover:text-[#6EDC44] transition-colors">Chlorine Sensors</a></li>
-                    <li><a href="/products" class="text-sm text-[#6C7480] hover:text-[#6EDC44] transition-colors">Dissolved Oxygen Sensors</a></li>
-                    <li><a href="/products" class="text-sm text-[#6C7480] hover:text-[#6EDC44] transition-colors">TSS Sensors</a></li>
-                    <li><a href="/products" class="text-sm text-[#6C7480] hover:text-[#6EDC44] transition-colors">Accessories</a></li>
+                    <li><a href="/products?category=gas-analyzer" class="text-sm text-[#6C7480] hover:text-[#6EDC44] transition-colors">Gas Analyzer</a></li>
+                    <li><a href="/products?category=gas-detector" class="text-sm text-[#6C7480] hover:text-[#6EDC44] transition-colors">Gas Detector</a></li>
+                    <li><a href="/products?category=liquid-analyzer" class="text-sm text-[#6C7480] hover:text-[#6EDC44] transition-colors">Liquid Analyzer</a></li>
                     <li><a href="/products" class="text-sm text-[#6C7480] hover:text-[#6EDC44] transition-colors">All Products</a></li>
                 </ul>
             </div>
@@ -59,7 +58,7 @@
             </div>
         </div>
         <div class="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm text-[#6C7480]">© 2024 Saxon Messtechnik. All rights reserved.</p>
+            <p class="text-sm text-[#6C7480]">© 2026 Saxon Messtechnik. All rights reserved.</p>
             <div class="flex space-x-6 mt-4 md:mt-0">
                 <a href="#" class="text-sm text-[#6C7480] hover:text-[#6EDC44] transition-colors">Privacy Policy</a>
                 <a href="#" class="text-sm text-[#6C7480] hover:text-[#6EDC44] transition-colors">Terms of Use</a>
