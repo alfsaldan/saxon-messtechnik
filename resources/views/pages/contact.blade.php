@@ -10,13 +10,13 @@
     <div class="absolute inset-0 z-0">
         <img src="/assets/hero/contact-hero.webp" alt="Contact Us Background" class="w-full h-full object-cover object-center opacity-60 mix-blend-screen" style="image-rendering: auto;">
         <!-- Dark Edge Smoothing to white -->
-        <div class="absolute inset-x-0 bottom-0 h-24 lg:h-32 bg-gradient-to-t from-white via-white/70 to-transparent pointer-events-none z-10"></div>
+        <div class="absolute inset-x-0 bottom-0 h-12 lg:h-20 bg-gradient-to-t from-white via-white/70 to-transparent pointer-events-none z-10"></div>
     </div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div class="w-full lg:w-[75%] fade-in-up relative">
             <!-- Fog behind text -->
-            <div class="absolute -inset-10 lg:-inset-20 z-0 pointer-events-none" style="background: radial-gradient(ellipse at center left, rgba(5,8,13,0.9) 0%, rgba(5,8,13,0.6) 50%, transparent 80%); filter: blur(40px);"></div>
+            <div class="absolute -inset-4 lg:-inset-10 z-0 pointer-events-none" style="background: radial-gradient(ellipse at center left, rgba(5,8,13,0.85) 0%, rgba(5,8,13,0.5) 45%, transparent 75%); filter: blur(30px);"></div>
             
             <div class="relative z-10">
                 <p class="text-[#6EDC44] font-bold tracking-widest text-xs lg:text-sm uppercase mb-3">Contact Us</p>

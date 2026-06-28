@@ -1,4 +1,4 @@
-<nav x-data="{ mobileMenuOpen: false }" class="fixed w-full z-50 top-0 transition-all duration-300 bg-[#05080D]/40 backdrop-blur-md border-b border-white/10" id="navbar">
+<nav x-data="{ mobileMenuOpen: false }" class="sticky w-full z-50 top-0 transition-all duration-300 bg-[#05080D]/80 backdrop-blur-md border-b border-white/10" id="navbar">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-[88px]">
             <!-- Logo -->
